@@ -1,6 +1,9 @@
 <script>
-  import { Styles } from 'sveltestrap';
+  import { Button } from 'sveltestrap';
   import NavBar from './lib/NavBar.svelte';
+  import app from './main';
+
+  const color = 'primary'
 
   let count = 0;
 
@@ -8,19 +11,13 @@
     count += 1;
   }
 </script>
-<head>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"/>
-</head>
 
 <main>
   <h1>Svelte CTF</h1>
   <NavBar />
   <p>Counter = {count}</p>
-  <button on:click={ increment }>Increment</button>
+  <Button {color} on:click={ increment }>Increment</Button>
 </main>
 
-<style>
- 
-</style>
+
+
